@@ -1,9 +1,12 @@
 <template>
-  <VerifyAccount/>
+    <div>
+        <Nuxt />
+    </div>
 </template>
 
+
 <script>
- export default {
+  export default {
     head: {
         title: 'Verify Account',
         titleTemplate: '%s | Patronize',
@@ -11,11 +14,11 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Verify your account'
+            content: 'Home page description'
           }
         ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
       
     }
-  }</script>
-
+  }
+</script>
