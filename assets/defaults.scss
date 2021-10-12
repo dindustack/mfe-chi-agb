@@ -21,13 +21,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
 
-p {
+p,
+label {
   margin-top: 0;
   margin-bottom: 1rem;
 }
