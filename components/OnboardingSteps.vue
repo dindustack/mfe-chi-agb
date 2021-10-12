@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin-top: 0.8rem;
+  margin-top: 0.3rem;
 
   .content {
       display: flex;

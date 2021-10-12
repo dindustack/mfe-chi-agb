@@ -41,15 +41,16 @@
       </div>
         </div>
         </div>
-        <LogoutButton />
-    
+        <bottom-button button-text="Continue"></bottom-button> 
     </div>
 </div>
 
 </template>
 
 <script>
+import BottomButton from './BottomButton.vue';
 export default {
+  components: { BottomButton },
     methods: {
         accordionClick () {
         const toggle = document.querySelector(".faq-toggle");
@@ -138,7 +139,7 @@ export default {
             padding: 12px 20px;
             margin: 8px 0;           
             height: 2.5rem;
-            border-radius: 10px;
+            border-radius: 5px;
             border: 1px solid #9fa4a8;
             @media only screen and (max-width: 568px) {
                 width: 100%;
