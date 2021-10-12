@@ -8,7 +8,7 @@
         <span class="step-counter">Step 1/3</span>
 
         <!-- Title -->
-        <h4 class="page-title mb-3">Verify Account</h4>
+        <h4 class="page-title mb-0">Verify Account</h4>
 
         <!-- Verification Method -->
         <div>
@@ -21,17 +21,43 @@
         </div>
 
         <!-- BVN View -->
-        <div class="bvn-view">
+        <div class="bvn-view mb-3">
         <p class="method-text mb-0">Bank Verification Number (11-digits)</p>
         <input type="number" />
         </div>
-    </div>
+
+        <!-- Accordion -->
+        <div class="accordion-container" @click="accordionClick()">
+             <div class="faq">
+        <h4 class="faq-title">Why we need your BVN</h4>
+        <p class="faq-text">
+          The Bank Verification Number (BVN) was introduced by the Central Bank of Nigeria (CBN) as a way to protect customers from identity theft, banking fraud and protect the integrity of the banking system. 
+        </p>
+
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+        </div>
+        </div>
+        <LogoutButton />
+    
     </div>
 </div>
 
 </template>
 
 <script>
+export default {
+    methods: {
+        accordionClick () {
+        const toggle = document.querySelector(".faq-toggle");
+
+         toggle.parentNode.classList.toggle("active");
+        }
+    }
+}
 
 </script>
 
@@ -52,6 +78,10 @@
     padding: 1.5rem 2rem;
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 999px) {
+       padding: 3.5rem 2rem 
+    }
 
     .step-counter {
     margin: 1.5rem 0;
@@ -101,15 +131,15 @@
         margin-top: 1rem;
 
         input {
-            width: 70%;
+            width: 100%;
             font-size: 1rem;
             display: inline-block;
             box-sizing: border-box;
             padding: 12px 20px;
             margin: 8px 0;           
             height: 2.5rem;
-            border-radius: 0.375rem;
-            border: 1px solid #838b96;
+            border-radius: 10px;
+            border: 1px solid #9fa4a8;
             @media only screen and (max-width: 568px) {
                 width: 100%;
 

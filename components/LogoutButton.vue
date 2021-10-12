@@ -14,12 +14,12 @@
 .logout-button {
     background-color: #FF6774;
     border: 1px solid #FF6774;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #FFF;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    padding: 17px 25px;
+    padding: 14px 23px;
     transition: all 0.2s ease-in-out;
     display: none;
     @media (min-width: 992px) {
