@@ -15,31 +15,13 @@
         <p class="method-text mb-1">Select a verification method</p>
 
         <div class="method-button">
-            <button class="btn">BVN</button>
-            <button class="btn ml-2">Personal Account Number</button>
+            <button class="btn" @click="activeBtn = 'Bvn'">BVN</button>
+            <button class="btn ml-2" @click="activeBtn = 'Pan'">Personal Account Number</button>
 
         </div>
-
-        <!-- BVN View -->
-        <div class="bvn-view mb-3">
-        <p class="method-text mb-0">Bank Verification Number (11-digits)</p>
-        <input type="number" />
-        </div>
-
-        <!-- Accordion -->
-        <div class="accordion-container" @click="accordionClick()">
-             <div class="faq">
-        <h4 class="faq-title">Why we need your BVN</h4>
-        <p class="faq-text">
-          The Bank Verification Number (BVN) was introduced by the Central Bank of Nigeria (CBN) as a way to protect customers from identity theft, banking fraud and protect the integrity of the banking system. 
-        </p>
-
-        <button class="faq-toggle">
-          <i class="fas fa-chevron-down"></i>
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-        </div>
+       
+        <component :is="activeBtn" />
+        
         </div>
         <bottom-button button-text="Continue"></bottom-button> 
     </div>
@@ -48,14 +30,10 @@
 </template>
 
 <script>
-import BottomButton from './BottomButton.vue';
 export default {
-  components: { BottomButton },
-    methods: {
-        accordionClick () {
-        const toggle = document.querySelector(".faq-toggle");
-
-         toggle.parentNode.classList.toggle("active");
+    data() {
+        return {
+            activeBtn: "Bvn"
         }
     }
 }
@@ -128,35 +106,7 @@ export default {
     }
     }
 
-    .bvn-view {
-        margin-top: 1rem;
-
-        input {
-            width: 100%;
-            font-size: 1rem;
-            display: inline-block;
-            box-sizing: border-box;
-            padding: 12px 20px;
-            margin: 8px 0;           
-            height: 2.5rem;
-            border-radius: 5px;
-            border: 1px solid #9fa4a8;
-            @media only screen and (max-width: 568px) {
-                width: 100%;
-
-            }
-            }
-
-            input::-webkit-outer-spin-button,
-            input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-            }
-
-            input[type="number"] {
-            -moz-appearance: textfield;
-            }
-        }
+    
 
         
 </style>

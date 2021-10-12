@@ -15,9 +15,8 @@
             <span class="content-number">3</span>
             <span class="content-text">Business Categories</span>
         </div>
-        
-        
 
+        
     </div>
 </template>
 
@@ -59,6 +58,10 @@
         }
     }
 
+    
+
 }
+
+
 
 </style>

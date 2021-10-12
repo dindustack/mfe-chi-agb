@@ -19,11 +19,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.hr-solid {
-    border: 1px solid #E9EEF4;
-    margin-bottom: 0.8rem;
-}
 .button-container {
   display: flex;
   justify-content: flex-end;
