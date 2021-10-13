@@ -44,7 +44,6 @@
 
 <script>
 export default {
-
     data() {
         return {
             length: 1,
