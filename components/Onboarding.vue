@@ -123,7 +123,7 @@ export default {
         align-items: center;
     }
 
-    .content-number.active {
+    .active .content-number {
         border-color: #006AFF;
         background-color: #006AFF;
         color: #FFF;
@@ -139,6 +139,10 @@ export default {
         @media (min-width: 992px) {
             display: block !important;
         }
+    }
+
+    .active .content-text {
+        color: #141737;
     }
 
 }

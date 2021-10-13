@@ -205,6 +205,10 @@ select {
   cursor: pointer;
   appearance: none;
 }
+select:focus {
+  outline: none;
+}
+
 .select-box::after {
   content: '';
   position: absolute;
