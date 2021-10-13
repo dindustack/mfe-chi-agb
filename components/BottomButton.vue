@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <hr class="hr-solid" />
-        <div class="button-container">
-            <button class="bottom-button">{{ buttonText }}</button>
-        </div>
+<div>
+    <hr class="hr-solid" />
+    <div class="button-container">
+        <button class="bottom-button" @click="$emit('clicked')">{{ buttonText }}</button>
     </div>
+</div>
 </template>
 
 <script>
@@ -13,16 +13,21 @@ export default {
         buttonText: {
             type: String,
             default: 'Button'
-        }
+        },
+        clicked: {
+            type: Function,
+            default: () => {}
     },
+    },
+    emits: ['clicked']
 }
 </script>
 
 <style lang="scss">
 .button-container {
-  display: flex;
-  justify-content: flex-end;
- 
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .bottom-button {
@@ -35,5 +40,5 @@ export default {
     font-weight: bold;
     padding: 14px 23px;
     transition: all 0.2s ease-in-out;
-    }
+}
 </style>

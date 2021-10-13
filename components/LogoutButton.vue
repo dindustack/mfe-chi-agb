@@ -1,14 +1,14 @@
 <template>
-    <div class="logout">
-        <button class="logout-button">Logout</button>
-    </div>
+<div class="logout">
+    <button class="logout-button">Logout</button>
+</div>
 </template>
 
 <style lang="scss">
 .logout {
-  display: flex;
-  justify-content: flex-end;
- 
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .logout-button {
@@ -22,8 +22,9 @@
     padding: 14px 23px;
     transition: all 0.2s ease-in-out;
     display: none;
+
     @media (min-width: 992px) {
-    display: block !important;
-}
+        display: block !important;
     }
+}
 </style>

@@ -35,7 +35,7 @@ label {
 }
 
 .ml-2 {
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
 }
 
 .mb-0 {
@@ -134,4 +134,39 @@ label {
 
 .faq.active .faq-toggle {
   background-color: #9fa4a8;
+}
+
+.method-text {
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.method-button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #dee0e7;
+    line-height: 1.2;
+    border-radius: 10px;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    padding: 17px 25px;
+    background: #f5f6fa;
+    color: #141737;
+
+    @media (max-width: 992px) {
+      padding: 17px;
+    }
+  }
+
+  .btn:focus {
+    background: #dceaff;
+    border: 1px solid #006aff;
+  }
 }

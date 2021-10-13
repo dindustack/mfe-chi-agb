@@ -1,21 +1,23 @@
 <template>
-  <VerifyAccount/>
+<Onboarding />
 </template>
 
 <script>
- export default {
+export default {
     head: {
-        title: 'Verify Account',
+        title: 'Onboarding',
         titleTemplate: '%s | Patronize',
-        meta: [
-          {
+        meta: [{
             hid: 'description',
             name: 'description',
             content: 'Verify your account'
-          }
-        ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-      
-    }
-  }</script>
+        }],
+        link: [{
+            rel: 'icon',
+            type: 'image/x-icon',
+            href: '/favicon.ico'
+        }],
 
+    }
+}
+</script>
