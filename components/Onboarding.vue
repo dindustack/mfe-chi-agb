@@ -32,6 +32,12 @@
             <SocialHandles />
             <bottom-button button-text="Confirm Social Handles" @clicked="gonext"></bottom-button>
         </div>
+
+        <!-- Business Category -->
+        <div v-if="length==3">
+            <BusinessCategory />
+            <bottom-button button-text="Complete" @clicked="gonext"></bottom-button>
+        </div>
     </div>
 </div>
 </template>

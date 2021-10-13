@@ -50,6 +50,10 @@ label {
   margin-bottom: 1rem !important;
 }
 
+.mb-5 {
+  margin-bottom: 2rem !important;
+}
+
 .page-title {
   font-size: 26px;
   color: #141737;
@@ -169,4 +173,50 @@ label {
     background: #dceaff;
     border: 1px solid #006aff;
   }
+}
+
+.interface-content {
+  display: flex;
+  flex-direction: column;
+
+  .step-counter {
+    margin: 1.5rem 0;
+    color: #a5b4cb;
+    font-size: 14px;
+  }
+}
+
+.select-box {
+  width: 100%;
+  position: relative;
+}
+
+select {
+  width: 100%;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin: 8px 0;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid #9fa4a8;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+}
+.select-box::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -5px;
+  border-top: 8px solid #9fa4a8;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.select-label {
+  font-size: 14px;
+  margin-top: 1rem;
+  font-weight: 500;
 }

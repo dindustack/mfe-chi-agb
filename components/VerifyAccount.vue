@@ -1,5 +1,5 @@
 <template>
-<div class="verify-content">
+<div class="interface-content">
     <span class="step-counter">Step 1/3</span>
 
     <!-- Title -->
@@ -12,7 +12,6 @@
         <div class="method-button">
             <button class="btn" @click="activeBtn = 'Bvn'">BVN</button>
             <button class="btn ml-2" @click="activeBtn = 'Pan'">Personal Account Number</button>
-
         </div>
 
         <component :is="activeBtn" />
@@ -33,18 +32,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.verify-content {
-    display: flex;
-    flex-direction: column;
-
-    .step-counter {
-        margin: 1.5rem 0;
-        color: #A5B4CB;
-        font-size: 14px;
-    }
-
-}
-
 .select-text {
     font-size: 12px;
     margin-bottom: 12px;

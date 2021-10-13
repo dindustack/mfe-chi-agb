@@ -6,9 +6,15 @@
 
         <!-- Select Bank -->
         <div>
-            <label class="pan-text mb-0">Select Bank
-                <select type="number" class="pan-select"></select>
-            </label>
+            <label class="select-label mb-0">Select Bank</label>
+            <div class="select-box">
+                <select>
+                    <option disabled selected></option>
+                    <option value="1">United Bank for Africa</option>
+                    <option value="2">Guaranty Trust Bank</option>
+                    <option value="3">Access Bank</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -20,11 +26,6 @@
 </script>
 
 <style lang="scss">
-.pan-text {
-    font-size: 14px;
-    margin-top: 1rem;
-}
-
 .pan-view {
     margin-top: 1rem;
     display: grid;
@@ -35,49 +36,5 @@
         grid-template-columns: 1fr;
     }
 
-    input {
-        width: 100%;
-        font-size: 1rem;
-        display: inline-block;
-        box-sizing: border-box;
-        padding: 12px 20px;
-        margin: 8px 0;
-        height: 2.5rem;
-        border-radius: 5px;
-        border: 1px solid #9fa4a8;
-
-        @media only screen and (max-width: 568px) {
-            width: 100%;
-
-        }
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    input[type="number"] {
-        -moz-appearance: textfield;
-    }
-
-    select {
-        width: 100%;
-        font-size: 1rem;
-        box-sizing: border-box;
-        padding: 12px 20px;
-        margin: 8px 0;
-        height: 2.5rem;
-        border-radius: 5px;
-        border: 1px solid #9fa4a8;
-        appearance: none;
-        font-family: inherit;
-        z-index: 1;
-
-        @media only screen and (max-width: 568px) {
-            width: 100%;
-        }
-    }
 }
 </style>

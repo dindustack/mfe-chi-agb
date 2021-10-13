@@ -1,25 +1,33 @@
 <template>
-<div class="business-content">
+<div class="interface-content">
     <span class="step-counter">Step 3/3</span>
 
     <!-- Title -->
     <h4 class="page-title mb-0">Business Category</h4>
 
     <!-- Verification Method -->
-    <div>
 
-        <div class="business-view mb-3">
-            <social-input label="Choose your Abeg Tag (required)"></social-input>
-            <social-input label="Instagram"></social-input>
-            <social-input label="Twitter"></social-input>
+    <div class="business-view mb-3">
+        <box-select label="Type of your business"></box-select>
+        <box-select label="Business Category"></box-select>
+    </div>
+    <div class="mb-5">
+        <p class="method-text mb-1">Do you use POS machines for your business?</p>
 
+        <div class="method-button">
+            <button class="btn">Yes</button>
+            <button class="btn ml-2">No</button>
         </div>
     </div>
 </div>
 </template>
 
 <script>
+import BoxSelect from './BoxSelect.vue'
 export default {
+    components: {
+        BoxSelect
+    },
 
     data() {
         return {
@@ -30,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-.social-view {
+.business-view {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,7 +49,7 @@ export default {
     }
 }
 
-.social-content {
+.business-content {
     display: flex;
     flex-direction: column;
 
@@ -52,6 +60,4 @@ export default {
     }
 
 }
-
-
 </style>

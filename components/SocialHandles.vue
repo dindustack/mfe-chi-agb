@@ -1,5 +1,5 @@
 <template>
-<div class="social-content">
+<div class="interface-content">
     <span class="step-counter">Step 2/3</span>
 
     <!-- Title -->
