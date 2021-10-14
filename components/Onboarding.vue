@@ -36,7 +36,8 @@
         <!-- Business Category -->
         <div v-if="length==3">
             <BusinessCategory />
-            <bottom-button button-text="Complete" @clicked="gonext"></bottom-button>
+            <Popup v-show="showPopup" />
+            <bottom-button button-text="Complete" @clicked="showPopup = true"></bottom-button>
         </div>
     </div>
 </div>
@@ -49,15 +50,12 @@ export default {
             length: 1,
             isActive: false,
             activeClass: 'active',
-            disableClass: 'disable'
+            disableClass: 'disable',
+            completedClass: 'completed',
+            showPopup: false,
         }
     },
     methods: {
-        goback() {
-            if (this.length <= 3 && this.length >= 2) {
-                this.length = this.length - 1
-            }
-        },
         gonext() {
             if (this.length <= 2 || this.length <= 1) {
                 this.length = this.length + 1
@@ -106,6 +104,7 @@ export default {
         display: flex;
         align-items: baseline;
         margin-right: 45px;
+        cursor: pointer
     }
 
     .content-number {

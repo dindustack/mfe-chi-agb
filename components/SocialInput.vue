@@ -23,6 +23,7 @@ export default {
     font-size: 14px;
     margin-top: 1rem;
     font-weight: 500;
+    color: #141737;
 }
 
 input {

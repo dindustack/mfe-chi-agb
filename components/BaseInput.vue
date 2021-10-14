@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- Input -->
-    <label class="input-text mb-0">{{ label }}</label>
+    <label class="label-title mb-0">{{ label }}</label>
     <input type="number" />
 
 </div>
@@ -19,10 +19,11 @@ export default {
 </script>
 
 <style lang="scss">
-.input-text {
+.label-title {
     font-size: 14px;
     margin-top: 1rem;
     font-weight: 500;
+    color: #141737;
 }
 
 input {
