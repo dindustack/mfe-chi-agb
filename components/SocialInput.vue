@@ -2,7 +2,7 @@
 <div>
     <!-- Input -->
     <label class="input-text mb-0">{{ label }}</label>
-    <input type="number" placeholder="@" />
+    <input type="text" placeholder="@" required />
 
 </div>
 </template>
@@ -40,15 +40,5 @@ input {
         width: 100%;
 
     }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
 }
 </style>
