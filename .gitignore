@@ -1,11 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Node template
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 # Logs
-/logs
+logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids
@@ -25,20 +21,17 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# Bower dependency directory (https://bower.io/)
-bower_components
-
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -53,38 +46,47 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# dotenv environment variable files
+#.env*
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.cjs
 # Yarn Integrity file
 .yarn-integrity
+/.yarn/*
+!/.yarn/plugins
+!/.yarn/releases
 
-# dotenv environment variables file
-.env
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# parcel-bundler cache (https://parceljs.org/)
-.cache
+# testing
+/coverage
 
-# next.js build output
-.next
-
-# nuxt.js build output
+# Nuxt build
 .nuxt
 
-# Nuxt generate
-dist
+# production
+/build
 
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless
-
-# IDE / Editor
-.idea
-
-# Service worker
-sw.*
-
-# macOS
+# misc
 .DS_Store
+*.pem
 
-# Vim swap files
-*.swp
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+#.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
