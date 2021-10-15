@@ -2,13 +2,18 @@
 <div class="popup">
     <div class="popup-content">
         <p>Your onboarding was successful</p>
-        <h4>Your account is been reviewed, and you will get notified once its ready.</h4>
-        <a href="https://www.patronize.co" target="_blank">
-            <button class="popup-btn">notify me</button>
+        <h4>Your application is been reviewed, and you will get notified once its ready.</h4>
+        <a href="https://dashboard.patronize.co/signin/">
+            <button class="popup-btn" @click="$emit('close')">Login</button>
         </a>
     </div>
 </div>
 </template>
+<script>
+export default {
+    emits: ['close']
+}
+</script>
 
 <style lang="scss" scoped>
 .popup {
@@ -39,7 +44,7 @@
     .popup-content {
         background-color: #FFF;
         border-radius: 10px;
-        width: 600px;
+        width: 450px;
         max-width: 100%;
         padding: 1.875rem 3.125rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -52,7 +57,7 @@
     }
 
     .popup-content h4 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: #141737;
 

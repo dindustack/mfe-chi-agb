@@ -11,6 +11,9 @@
 
         <div class="social-view mb-3">
             <social-input label="Choose your Abeg Tag (required)"></social-input>
+        </div>
+        
+        <div class="social-view mb-3">
             <social-input label="Instagram"></social-input>
             <social-input label="Twitter"></social-input>
 

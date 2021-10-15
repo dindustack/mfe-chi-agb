@@ -5,18 +5,19 @@
         <LogoutButton />
         <!-- Onboarding steps  -->
         <div class="steps-container">
-            <div class="content" :class="[length >= 1 ? activeClass : disableClass]">
-                <span class="content-number">1</span>
+            <div class="content" :class="[length == 1 && activeClass, length >= 2 && completedClass ]">
+                <span class="content-number">
+                    <span>1</span></span>
                 <span class="content-text">Verify Account</span>
             </div>
 
-            <div class="content" :class="[length >= 2 ? activeClass : disableClass]">
-                <span class="content-number">2</span>
+            <div class="content" :class="[length == 2 && activeClass, length >= 3 && completedClass]">
+                <span class="content-number"><span>2</span></span>
                 <span class="content-text">Social Handles</span>
             </div>
 
             <div class="content" :class="[length >= 3 ? activeClass : disableClass]">
-                <span class="content-number">3</span>
+                <span class="content-number"><span>3</span></span>
                 <span class="content-text">Business Categories</span>
             </div>
 
@@ -35,8 +36,8 @@
 
         <!-- Business Category -->
         <div v-if="length==3">
-            <BusinessCategory />
-            <Popup v-show="showPopup" />
+            <BusinessCategory  />
+            <Popup v-show="showPopup" @close="showPopup = false" />
             <bottom-button button-text="Complete" @clicked="showPopup = true"></bottom-button>
         </div>
     </div>
@@ -144,6 +145,21 @@ export default {
         color: #141737;
     }
 
+    .completed .content-number {
+        border-color: #DCEAFF;
+        background-color: #DCEAFF;
+    }
+
+     .completed .content-number span {
+        display: none;
+    }
+
+     .completed .content-number::after {
+        content: '\2713';
+        font-size: 20px;
+        color: #006AFF;
+    }
+
 }
 
 .select-text {
@@ -175,9 +191,6 @@ export default {
         background: #F5F6FA;
         color: #141737;
 
-        @media (max-width: 992px) {
-            padding: 17px
-        }
     }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- Input -->
-    <label class="input-text mb-0">{{ label }}</label>
+    <label class="social-text mb-0">{{ label }}</label>
     <input type="text" placeholder="@" required />
 
 </div>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-.input-text {
+.social-text {
     font-size: 14px;
     margin-top: 1rem;
     font-weight: 500;
