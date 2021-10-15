@@ -16,7 +16,7 @@
                 <span class="content-text">Social Handles</span>
             </div>
 
-            <div class="content" :class="[length >= 3 ? activeClass : disableClass]">
+            <div class="content" :class="[length == 3 && activeClass, showPopup && completedClass]">
                 <span class="content-number"><span>3</span></span>
                 <span class="content-text">Business Categories</span>
             </div>
