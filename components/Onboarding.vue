@@ -152,7 +152,6 @@ export default {
 
     .completed .content-text {
         color: #A5B4CB;
-
     }
 
      .completed .content-number span {

@@ -8,9 +8,30 @@
     <!-- Verification Method -->
 
     <div class="business-view mb-3">
-        <box-select label="Type of your business"></box-select>
-        <box-select label="Business Category"></box-select>
+        <div>
+            <label class="select-label mb-0">Type of your business</label>
+            <div class="select-box">
+                <select>
+                    <option disabled selected></option>
+                    <option value="1">Catering</option>
+                    <option value="2">Makeup Artistry</option>
+                </select>
+            </div>
+        </div>
+        <!-- Business Category -->
+        <div>
+            <label class="select-label mb-0">Business Category</label>
+            <div class="select-box">
+                <select>
+                    <option disabled selected></option>
+                    <option value="1">Agriculture</option>
+                    <option value="2">Beauty</option>
+                </select>
+            </div>
+        </div>
     </div>
+
+    <!-- POS Buttons -->
     <div class="mb-5">
         <p class="method-text mb-1">Do you use POS machines for your business?</p>
 
@@ -21,21 +42,6 @@
     </div>
 </div>
 </template>
-
-<script>
-import BoxSelect from './BoxSelect.vue'
-export default {
-    components: {
-        BoxSelect
-    },
-
-    data() {
-        return {
-            activeBtn: "Bvn",
-        }
-    },
-}
-</script>
 
 <style lang="scss">
 .business-view {

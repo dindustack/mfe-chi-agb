@@ -65,7 +65,7 @@ export default {
 
     .popup-content p {
         font-size: 0.8rem;
-        font-weight: 500;
+        font-weight: 700;
         color: #006AFF;
         margin: 1.25rem 0 0.625rem;
         text-transform: uppercase;
