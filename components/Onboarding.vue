@@ -150,6 +150,11 @@ export default {
         background-color: #DCEAFF;
     }
 
+    .completed .content-text {
+        color: #A5B4CB;
+
+    }
+
      .completed .content-number span {
         display: none;
     }
