@@ -4,16 +4,11 @@
         <p>Your onboarding was successful</p>
         <h4>Your application is been reviewed, and you will get notified once its ready.</h4>
         <a href="https://dashboard.patronize.co/signin/">
-            <button class="popup-btn" @click="$emit('close')">Login</button>
+            <button class="popup-btn">Login</button>
         </a>
     </div>
 </div>
 </template>
-<script>
-export default {
-    emits: ['close']
-}
-</script>
 
 <style lang="scss" scoped>
 .popup {

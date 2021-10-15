@@ -37,7 +37,7 @@
         <!-- Business Category -->
         <div v-if="length==3">
             <BusinessCategory  />
-            <Popup v-show="showPopup" @close="showPopup = false" />
+            <Popup v-show="showPopup" />
             <bottom-button button-text="Complete" @clicked="showPopup = true"></bottom-button>
         </div>
     </div>
