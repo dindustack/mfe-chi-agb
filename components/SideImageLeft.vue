@@ -1,7 +1,7 @@
 <template>
 <div class="left-side-image">
     <div class="image-container">
-        <!-- <img src="~/assets/image/cover.png"  alt="cover"> -->
+        <img src="~/assets/image/cover.png" alt="cover" class="img-art">
     </div>
 </div>
 </template>
@@ -22,8 +22,14 @@
     }
 
     .image-container {
-        vertical-align: bottom;
-        display: table-cell;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .img-art {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 
 }
